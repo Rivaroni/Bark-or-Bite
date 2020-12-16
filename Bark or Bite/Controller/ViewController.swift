@@ -33,12 +33,19 @@ class ViewController: UIViewController {
         if sender.currentTitle == "Back"{
             fetchPrevious()
             
+        } else if sender.currentTitle == "Like"{
+            thumbView.tintColor = .green
+            thumbView.alpha = 1
+            cardSwipedRight()
         } else {
-            imageManager.fetchImage()
+            thumbView.tintColor = .red
+            thumbView.alpha = 1
+            cardSwipedLeft()
         }
         
     }
     
+    // UIPanGesture functionailty to swipe the card like tinder
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         
         let card = sender.view!
@@ -58,14 +65,27 @@ class ViewController: UIViewController {
         thumbView.alpha = abs(xFromCenter / view.center.x)
         
         if sender.state == UIGestureRecognizer.State.ended {
-            UIView.animate(withDuration: 0.5) {
-                card.center = self.view.center
-                self.thumbView.alpha = 0
+            
+            if card.center.x < 75{
+                // Move off to the left side
+                cardSwipedLeft()
+            }else if card.center.x > (view.frame.width - 75){
+                // Move off to the right side
+                cardSwipedRight()
+            }else{
+                // Move back to the middle if didnt swipe far enough
+                resetCard()
             }
+            
         }
+        
     }
     
 }
+
+
+
+
 
 //MARK: - Image API Delegate Methods
 
@@ -111,5 +131,40 @@ extension ViewController{
             imageView.image = previousImages.last
         }
     }
+    
+    func resetCard(){
+        UIView.animate(withDuration: 0.6) {
+            self.cardView.center = self.view.center
+            self.thumbView.alpha = 0
+            self.cardView.alpha = 1
+        }
+    }
+    
+    func cardSwiped(){
+        imageManager.fetchImage()
+        Timer.scheduledTimer(withTimeInterval: 0.6, repeats: false) { (timer) in
+            self.thumbView.alpha = 0
+            self.resetCard()
+        }
+    }
+    
+    func cardSwipedRight(){
+        UIView.animate(withDuration: 0.3) {
+            self.cardView.center = CGPoint(x: self.cardView.center.x + 200, y: self.cardView.center.y + 75)
+            self.cardView.alpha = 0
+        }
+        cardSwiped()
+        return
+    }
+    
+    func cardSwipedLeft(){
+        UIView.animate(withDuration: 0.3) {
+            self.cardView.center = CGPoint(x: self.cardView.center.x - 200, y: self.cardView.center.y + 75)
+            self.cardView.alpha = 0
+        }
+        cardSwiped()
+        return
+    }
+    
 }
 
