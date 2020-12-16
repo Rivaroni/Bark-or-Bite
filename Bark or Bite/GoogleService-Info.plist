@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>673429462977-tkko7e84721vujcjbdrusc31dku0qir3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.673429462977-tkko7e84721vujcjbdrusc31dku0qir3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB-aKUvtULrxiKhSyTB3eUzZGwi2a7TWxU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>673429462977</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rivaroni.Bark-or-Bite</string>
+	<key>PROJECT_ID</key>
+	<string>bark-or-bite</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bark-or-bite.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:673429462977:ios:ca573bec2da4e3ba5b9940</string>
+</dict>
+</plist>

@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5DD0360CED30E7DBBE0F711 /* Pods_Bark_or_Bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88D764076EA2CF87E1F1EE0 /* Pods_Bark_or_Bite.framework */; };
+		3BC20EF833A53685D34601B0 /* Pods_Bark_or_Bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B094FD5D752078E23CE81216 /* Pods_Bark_or_Bite.framework */; };
 		F618DC39258A914200DEB613 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC38258A914200DEB613 /* ChatViewController.swift */; };
 		F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC3B258A917D00DEB613 /* ProfileViewController.swift */; };
+		F618DC43258A947600DEB613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F618DC42258A947600DEB613 /* GoogleService-Info.plist */; };
 		F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF782587BE79002AE9DE /* ImageManager.swift */; };
 		F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7C2587BEEE002AE9DE /* ImageData.swift */; };
 		F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7F2587C060002AE9DE /* ImageModel.swift */; };
@@ -22,11 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7CF0184FD2D669B95AB768DE /* Pods-Bark or Bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.debug.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.debug.xcconfig"; sourceTree = "<group>"; };
-		7F361391A03206241DE81909 /* Pods-Bark or Bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.release.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.release.xcconfig"; sourceTree = "<group>"; };
-		A88D764076EA2CF87E1F1EE0 /* Pods_Bark_or_Bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bark_or_Bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1534E929282C81292B023966 /* Pods-Bark or Bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.debug.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.debug.xcconfig"; sourceTree = "<group>"; };
+		B094FD5D752078E23CE81216 /* Pods_Bark_or_Bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bark_or_Bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F618DC38258A914200DEB613 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F618DC3B258A917D00DEB613 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F618DC42258A947600DEB613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F67DCF782587BE79002AE9DE /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		F67DCF7C2587BEEE002AE9DE /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		F67DCF7F2587C060002AE9DE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		F6C159FB258676A5004A862E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6C159FE258676A5004A862E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6C15A00258676A5004A862E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA885B44F447C93F7531544D /* Pods-Bark or Bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.release.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +47,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5DD0360CED30E7DBBE0F711 /* Pods_Bark_or_Bite.framework in Frameworks */,
+				3BC20EF833A53685D34601B0 /* Pods_Bark_or_Bite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A60A9BAA4A9485C6CA37F68 /* Frameworks */ = {
+		A995B7791E3E99F197740E97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A88D764076EA2CF87E1F1EE0 /* Pods_Bark_or_Bite.framework */,
+				B094FD5D752078E23CE81216 /* Pods_Bark_or_Bite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -63,8 +65,8 @@
 		ED1FC2EE71BA559D701944BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7CF0184FD2D669B95AB768DE /* Pods-Bark or Bite.debug.xcconfig */,
-				7F361391A03206241DE81909 /* Pods-Bark or Bite.release.xcconfig */,
+				1534E929282C81292B023966 /* Pods-Bark or Bite.debug.xcconfig */,
+				FA885B44F447C93F7531544D /* Pods-Bark or Bite.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -114,7 +116,7 @@
 				F6C159F1258676A5004A862E /* Bark or Bite */,
 				F6C159F0258676A5004A862E /* Products */,
 				ED1FC2EE71BA559D701944BA /* Pods */,
-				7A60A9BAA4A9485C6CA37F68 /* Frameworks */,
+				A995B7791E3E99F197740E97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +135,7 @@
 				F67DCF742587BE2F002AE9DE /* View */,
 				F67DCF762587BE46002AE9DE /* Controller */,
 				F6C15A00258676A5004A862E /* Info.plist */,
+				F618DC42258A947600DEB613 /* GoogleService-Info.plist */,
 				F67DCF732587BE17002AE9DE /* Supporting Files */,
 			);
 			path = "Bark or Bite";
@@ -145,11 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6C15A03258676A5004A862E /* Build configuration list for PBXNativeTarget "Bark or Bite" */;
 			buildPhases = (
-				ED01CD48E187F788AB2317EE /* [CP] Check Pods Manifest.lock */,
+				85BF8F6FCAD8BC2FE57C4920 /* [CP] Check Pods Manifest.lock */,
 				F6C159EB258676A5004A862E /* Sources */,
 				F6C159EC258676A5004A862E /* Frameworks */,
 				F6C159ED258676A5004A862E /* Resources */,
-				400018C0A3B48E5BE625A942 /* [CP] Embed Pods Frameworks */,
+				C2A4A495F6990F34B5B68EA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C159FF258676A5004A862E /* LaunchScreen.storyboard in Resources */,
+				F618DC43258A947600DEB613 /* GoogleService-Info.plist in Resources */,
 				F6C159FC258676A5004A862E /* Assets.xcassets in Resources */,
 				F6C159FA258676A5004A862E /* Main.storyboard in Resources */,
 			);
@@ -206,24 +210,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		400018C0A3B48E5BE625A942 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED01CD48E187F788AB2317EE /* [CP] Check Pods Manifest.lock */ = {
+		85BF8F6FCAD8BC2FE57C4920 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -243,6 +230,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A4A495F6990F34B5B68EA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -403,7 +407,7 @@
 		};
 		F6C15A04258676A5004A862E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CF0184FD2D669B95AB768DE /* Pods-Bark or Bite.debug.xcconfig */;
+			baseConfigurationReference = 1534E929282C81292B023966 /* Pods-Bark or Bite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,7 +428,7 @@
 		};
 		F6C15A05258676A5004A862E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F361391A03206241DE81909 /* Pods-Bark or Bite.release.xcconfig */;
+			baseConfigurationReference = FA885B44F447C93F7531544D /* Pods-Bark or Bite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

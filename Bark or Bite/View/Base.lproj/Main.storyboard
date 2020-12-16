@@ -79,10 +79,10 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-Tb-Zz5">
-                                <rect key="frame" x="22" y="728" width="371" height="75"/>
+                                <rect key="frame" x="22" y="728" width="370" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hw-pl-Ci1">
-                                        <rect key="frame" x="0.0" y="0.0" width="77" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="2cI-wV-mL1"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="j5V-Es-5kY"/>
@@ -95,7 +95,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-Cj-p5F">
-                                        <rect key="frame" x="147" y="0.0" width="77" height="75"/>
+                                        <rect key="frame" x="146.5" y="0.0" width="77" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="UDd-e3-S2Y"/>
                                             <constraint firstAttribute="height" constant="75" id="gZO-Ga-rJd"/>
@@ -108,7 +108,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-JN-nlB">
-                                        <rect key="frame" x="294" y="0.0" width="77" height="75"/>
+                                        <rect key="frame" x="293.5" y="0.0" width="76.5" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="0lu-Ja-V73"/>
                                             <constraint firstAttribute="height" constant="75" id="lxC-Ue-QMZ"/>
@@ -132,7 +132,7 @@
                             <constraint firstItem="7Zs-wb-spy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BH1-mO-syu"/>
                             <constraint firstItem="2ph-Tb-Zz5" firstAttribute="top" secondItem="7Zs-wb-spy" secondAttribute="bottom" constant="20" id="GhK-YS-551"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Zs-wb-spy" secondAttribute="trailing" constant="5" id="Oms-mX-hIj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ph-Tb-Zz5" secondAttribute="trailing" constant="21" id="afx-N2-po8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ph-Tb-Zz5" secondAttribute="trailing" constant="22" id="afx-N2-po8"/>
                             <constraint firstItem="7Zs-wb-spy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zYE-kn-V0z"/>
                         </constraints>
                     </view>
