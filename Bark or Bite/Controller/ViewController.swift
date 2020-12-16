@@ -19,11 +19,14 @@ class ViewController: UIViewController {
     
     var previousImages = [UIImage]()
     
+    var divisor: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set up delegate to allow view controller to edit
         imageManager.delegate = self
         
+        divisor = (view.frame.width / 2) / 0.61
         cardView.layer.cornerRadius = 10
         imageView.layer.cornerRadius = 10
     }
@@ -34,10 +37,12 @@ class ViewController: UIViewController {
             fetchPrevious()
             
         } else if sender.currentTitle == "Like"{
+            thumbView.image = UIImage(named: "thumbup")
             thumbView.tintColor = .green
             thumbView.alpha = 1
             cardSwipedRight()
         } else {
+            thumbView.image = UIImage(named: "thumbdown")
             thumbView.tintColor = .red
             thumbView.alpha = 1
             cardSwipedLeft()
@@ -53,6 +58,13 @@ class ViewController: UIViewController {
         let point = sender.translation(in: view)
         let xFromCenter = card.center.x - view.center.x
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
+        
+        let scale = min(100/abs(xFromCenter), 1)
+        
+        // CGAffineTransform allows u to rotate and move the card
+        // Uses radians not degrees 35 degrees = 0.61 radians
+        // Add a "." to add more transforms
+        card.transform = CGAffineTransform(rotationAngle: xFromCenter / divisor).scaledBy(x: scale, y: scale)
         
         if xFromCenter > 0 {
             thumbView.image = UIImage(named: "thumbup")
@@ -82,10 +94,6 @@ class ViewController: UIViewController {
     }
     
 }
-
-
-
-
 
 //MARK: - Image API Delegate Methods
 
@@ -133,36 +141,39 @@ extension ViewController{
     }
     
     func resetCard(){
+        // identity = Restores object original position
+        cardView.transform = CGAffineTransform.identity
         UIView.animate(withDuration: 0.6) {
             self.cardView.center = self.view.center
             self.thumbView.alpha = 0
             self.cardView.alpha = 1
+            
         }
     }
     
-    func cardSwiped(){
+    func cardWasSwiped(){
         imageManager.fetchImage()
-        Timer.scheduledTimer(withTimeInterval: 0.6, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 0.65, repeats: false) { (timer) in
             self.thumbView.alpha = 0
             self.resetCard()
         }
     }
     
     func cardSwipedRight(){
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.2) {
             self.cardView.center = CGPoint(x: self.cardView.center.x + 200, y: self.cardView.center.y + 75)
             self.cardView.alpha = 0
         }
-        cardSwiped()
+        cardWasSwiped()
         return
     }
     
     func cardSwipedLeft(){
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.25) {
             self.cardView.center = CGPoint(x: self.cardView.center.x - 200, y: self.cardView.center.y + 75)
             self.cardView.alpha = 0
         }
-        cardSwiped()
+        cardWasSwiped()
         return
     }
     
