@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MatchViewController: UIViewController {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
 
 //MARK: - Image API Delegate Methods
 
-extension ViewController: ImageManagerDelegate{
+extension MatchViewController: ImageManagerDelegate{
     
     func didUpdateImage(_ imageManager: ImageManager, image: ImageModel) {
         DispatchQueue.main.async {
@@ -115,7 +115,7 @@ extension ViewController: ImageManagerDelegate{
 
 //MARK: - ViewController Functionaility
 
-extension ViewController{
+extension MatchViewController{
     
     func fetchUIImage(imageString: String) -> UIImage?{
         

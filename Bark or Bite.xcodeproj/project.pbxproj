@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A5DD0360CED30E7DBBE0F711 /* Pods_Bark_or_Bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88D764076EA2CF87E1F1EE0 /* Pods_Bark_or_Bite.framework */; };
+		F618DC39258A914200DEB613 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC38258A914200DEB613 /* ChatViewController.swift */; };
+		F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC3B258A917D00DEB613 /* ProfileViewController.swift */; };
 		F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF782587BE79002AE9DE /* ImageManager.swift */; };
 		F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7C2587BEEE002AE9DE /* ImageData.swift */; };
 		F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7F2587C060002AE9DE /* ImageModel.swift */; };
 		F6C159F3258676A5004A862E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F2258676A5004A862E /* AppDelegate.swift */; };
 		F6C159F5258676A5004A862E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F4258676A5004A862E /* SceneDelegate.swift */; };
-		F6C159F7258676A5004A862E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F6258676A5004A862E /* ViewController.swift */; };
+		F6C159F7258676A5004A862E /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F6258676A5004A862E /* MatchViewController.swift */; };
 		F6C159FA258676A5004A862E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C159F8258676A5004A862E /* Main.storyboard */; };
 		F6C159FC258676A5004A862E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C159FB258676A5004A862E /* Assets.xcassets */; };
 		F6C159FF258676A5004A862E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C159FD258676A5004A862E /* LaunchScreen.storyboard */; };
@@ -23,13 +25,15 @@
 		7CF0184FD2D669B95AB768DE /* Pods-Bark or Bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.debug.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.debug.xcconfig"; sourceTree = "<group>"; };
 		7F361391A03206241DE81909 /* Pods-Bark or Bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.release.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.release.xcconfig"; sourceTree = "<group>"; };
 		A88D764076EA2CF87E1F1EE0 /* Pods_Bark_or_Bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bark_or_Bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F618DC38258A914200DEB613 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F618DC3B258A917D00DEB613 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F67DCF782587BE79002AE9DE /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		F67DCF7C2587BEEE002AE9DE /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		F67DCF7F2587C060002AE9DE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		F6C159EF258676A5004A862E /* Bark or Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bark or Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C159F2258676A5004A862E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C159F4258676A5004A862E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6C159F6258676A5004A862E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6C159F6258676A5004A862E /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		F6C159F9258676A5004A862E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6C159FB258676A5004A862E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6C159FE258676A5004A862E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,7 +101,9 @@
 		F67DCF762587BE46002AE9DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F6C159F6258676A5004A862E /* ViewController.swift */,
+				F6C159F6258676A5004A862E /* MatchViewController.swift */,
+				F618DC38258A914200DEB613 /* ChatViewController.swift */,
+				F618DC3B258A917D00DEB613 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,11 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C159F7258676A5004A862E /* ViewController.swift in Sources */,
+				F6C159F7258676A5004A862E /* MatchViewController.swift in Sources */,
 				F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */,
 				F6C159F3258676A5004A862E /* AppDelegate.swift in Sources */,
+				F618DC39258A914200DEB613 /* ChatViewController.swift in Sources */,
 				F6C159F5258676A5004A862E /* SceneDelegate.swift in Sources */,
 				F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */,
+				F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */,
 				F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

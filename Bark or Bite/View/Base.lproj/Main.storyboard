@@ -12,7 +12,7 @@
         <!--Match-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bark_or_Bite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MatchViewController" customModule="Bark_or_Bite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,43 +78,43 @@
                                     <outletCollection property="gestureRecognizers" destination="7nZ-PH-99v" appends="YES" id="tQJ-PF-v9c"/>
                                 </connections>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-Tb-Zz5">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-Tb-Zz5">
                                 <rect key="frame" x="22" y="728" width="371" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hw-pl-Ci1">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="2cI-wV-mL1"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="j5V-Es-5kY"/>
                                         </constraints>
-                                        <state key="normal" title="Dislike">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Dislike" backgroundImage="dislike">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXl-6E-srY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-Cj-p5F">
-                                        <rect key="frame" x="148" y="0.0" width="75" height="75"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-Cj-p5F">
+                                        <rect key="frame" x="147" y="0.0" width="77" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="UDd-e3-S2Y"/>
                                             <constraint firstAttribute="height" constant="75" id="gZO-Ga-rJd"/>
                                         </constraints>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Back" backgroundImage="back">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1j-QZ-xQ2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-JN-nlB">
-                                        <rect key="frame" x="296" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="294" y="0.0" width="77" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="0lu-Ja-V73"/>
                                             <constraint firstAttribute="height" constant="75" id="lxC-Ue-QMZ"/>
                                         </constraints>
-                                        <state key="normal" title="Like">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Like" backgroundImage="heart">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7S9-GI-ax1"/>
@@ -154,6 +154,40 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="137.94642857142856"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="mX9-z4-DEa">
+            <objects>
+                <viewController id="i9B-3R-Hz4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etl-lr-V7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dxm-zw-fUW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="1Xo-4n-w0F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ve-T2-1Ye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1787" y="138"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="1e3-wK-Ymc">
+            <objects>
+                <viewController id="bXJ-uS-8iP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btR-Ph-eeJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WDB-kx-Q4P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="message.circle" catalog="system" id="d5X-r4-dMb"/>
+                    <navigationItem key="navigationItem" id="kfM-Ng-AHe"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMD-Y1-DnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="798"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VEP-yi-zuc">
             <objects>
@@ -165,9 +199,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.62935656309999999" green="0.60669881110000001" blue="0.96869605780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ItX-nM-qtj"/>
+                        <segue destination="bXJ-uS-8iP" kind="relationship" relationship="viewControllers" id="L7I-mr-4fV"/>
+                        <segue destination="i9B-3R-Hz4" kind="relationship" relationship="viewControllers" id="OHy-jH-y4I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9I-zE-QYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,11 +214,19 @@
     </scenes>
     <resources>
         <image name="abstract1" width="1080" height="1920"/>
+        <image name="back" width="40" height="40"/>
+        <image name="dislike" width="40" height="40"/>
         <image name="funny-corgi-butts4" width="660" height="660"/>
+        <image name="heart" width="40" height="40"/>
         <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="message.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="thumbup" width="80" height="80"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
