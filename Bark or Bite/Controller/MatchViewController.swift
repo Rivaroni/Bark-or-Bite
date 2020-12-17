@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class MatchViewController: UIViewController {
     
@@ -18,6 +20,10 @@ class MatchViewController: UIViewController {
     var imageManager = ImageManager()
     
     var previousImages = [UIImage]()
+    
+    var breedStringArray = [String]()
+    
+    let dateBase = Firestore.firestore()
     
     var divisor: CGFloat!
     
@@ -34,6 +40,8 @@ class MatchViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         
         if sender.currentTitle == "Back"{
+            breedStringArray.removeLast()
+            dogTextLabel.text = breedStringArray.last
             fetchPrevious()
             
         } else if sender.currentTitle == "Like"{
@@ -113,12 +121,14 @@ extension MatchViewController: ImageManagerDelegate{
     
 }
 
-//MARK: - ViewController Functionaility
+//MARK: - MatchViewController Functionaility
 
 extension MatchViewController{
     
     func fetchUIImage(imageString: String) -> UIImage?{
         
+        fetchBreedString(imageString: imageString)
+    
         let imageURL = URL(string: imageString)
         
         let imageData = try! Data(contentsOf: imageURL!)
@@ -131,6 +141,31 @@ extension MatchViewController{
         }
         
         return nil
+    }
+    
+    func fetchBreedString(imageString: String){
+        
+        // Cut the string up by the "/" and removed the suffix to access the breed string
+        var breedArray = imageString.components(separatedBy: "/")
+        breedArray.removeLast()
+        if let breedString = breedArray.last?.capitalized{
+            
+            breedStringArray.append(breedString)
+            
+//            dateBase.collection("breedNames").document("test 3").setData(["name" : [breedString]], merge: true) { error in
+//                if let error = error {
+//                    print("Error writing document: \(error)")
+//                } else {
+//                    print("Document successfully written!")
+//                }
+//            }
+//
+//            let dbBreed = dateBase.collection("breedNames").document("test 3")
+//            dbBreed.updateData([ "name" : FieldValue.arrayUnion([breedString]) ])
+            
+            dogTextLabel.text = breedString
+        }
+        
     }
     
     func fetchPrevious() {

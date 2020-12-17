@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		F618DC39258A914200DEB613 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC38258A914200DEB613 /* ChatViewController.swift */; };
 		F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC3B258A917D00DEB613 /* ProfileViewController.swift */; };
 		F618DC43258A947600DEB613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F618DC42258A947600DEB613 /* GoogleService-Info.plist */; };
+		F640EAB9258BAFEF00C63B90 /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640EAB8258BAFEF00C63B90 /* ChatList.swift */; };
 		F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF782587BE79002AE9DE /* ImageManager.swift */; };
 		F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7C2587BEEE002AE9DE /* ImageData.swift */; };
 		F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7F2587C060002AE9DE /* ImageModel.swift */; };
@@ -28,6 +29,7 @@
 		F618DC38258A914200DEB613 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F618DC3B258A917D00DEB613 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F618DC42258A947600DEB613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F640EAB8258BAFEF00C63B90 /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
 		F67DCF782587BE79002AE9DE /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		F67DCF7C2587BEEE002AE9DE /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		F67DCF7F2587C060002AE9DE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				F67DCF782587BE79002AE9DE /* ImageManager.swift */,
 				F67DCF7C2587BEEE002AE9DE /* ImageData.swift */,
 				F67DCF7F2587C060002AE9DE /* ImageModel.swift */,
+				F640EAB8258BAFEF00C63B90 /* ChatList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				F6C159F5258676A5004A862E /* SceneDelegate.swift in Sources */,
 				F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */,
 				F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */,
+				F640EAB9258BAFEF00C63B90 /* ChatList.swift in Sources */,
 				F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
