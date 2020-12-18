@@ -96,8 +96,8 @@
                                                             <constraint firstAttribute="height" constant="50" id="AzT-5G-ozf"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="afg-Ut-WsA"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
-                                                        <state key="normal" title="Chat">
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                                        <state key="normal" title="More Info">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V5X-YO-kZS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="684"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="List" id="FOg-h2-14D">
@@ -199,43 +199,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="n3r-6A-azm">
-                                <rect key="frame" x="20" y="753" width="374" height="35"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJh-ad-jNK">
-                                        <rect key="frame" x="0.0" y="0.0" width="313" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="HrY-rM-9zB"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="done"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkR-Xc-rXg">
-                                        <rect key="frame" x="340" y="0.0" width="34" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="34" id="1HO-4z-iE9"/>
-                                            <constraint firstAttribute="height" constant="35" id="UGf-nP-3Lz"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="icons8-paper_plane"/>
-                                        <connections>
-                                            <action selector="sendButtonPressed:" destination="bXJ-uS-8iP" eventType="touchUpInside" id="jgZ-FT-v7p"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WDB-kx-Q4P"/>
-                        <color key="backgroundColor" red="0.87293297049999996" green="0.82049542669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="V5X-YO-kZS" firstAttribute="top" secondItem="WDB-kx-Q4P" secondAttribute="top" id="2jf-4c-fTW"/>
                             <constraint firstItem="V5X-YO-kZS" firstAttribute="leading" secondItem="WDB-kx-Q4P" secondAttribute="leading" id="4jp-Kc-DWd"/>
-                            <constraint firstItem="n3r-6A-azm" firstAttribute="leading" secondItem="WDB-kx-Q4P" secondAttribute="leading" constant="20" id="5sn-3o-1o9"/>
-                            <constraint firstItem="WDB-kx-Q4P" firstAttribute="trailing" secondItem="n3r-6A-azm" secondAttribute="trailing" constant="20" id="CTD-2o-Y3s"/>
-                            <constraint firstItem="n3r-6A-azm" firstAttribute="top" secondItem="V5X-YO-kZS" secondAttribute="bottom" constant="25" id="MXI-yD-ccX"/>
                             <constraint firstItem="V5X-YO-kZS" firstAttribute="trailing" secondItem="WDB-kx-Q4P" secondAttribute="trailing" id="XEb-VV-pdm"/>
-                            <constraint firstItem="WDB-kx-Q4P" firstAttribute="bottom" secondItem="n3r-6A-azm" secondAttribute="bottom" constant="25" id="t5D-Gk-wMC"/>
+                            <constraint firstItem="WDB-kx-Q4P" firstAttribute="bottom" secondItem="V5X-YO-kZS" secondAttribute="bottom" id="iPn-jm-5aN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="message.circle" catalog="system" id="d5X-r4-dMb"/>
@@ -243,7 +214,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chatTableView" destination="V5X-YO-kZS" id="cYh-6x-7dX"/>
-                        <outlet property="chatTextField" destination="MJh-ad-jNK" id="mzF-8G-C6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMD-Y1-DnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -263,7 +233,7 @@
                                 <color key="backgroundColor" red="0.62935656309999999" green="0.60669881110000001" blue="0.96869605780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-9q-AYd">
-                                <rect key="frame" x="0.0" y="20" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="743"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="List" id="Quo-Rz-Wl4">
@@ -276,29 +246,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="182" translatesAutoresizingMaskIntoConstraints="NO" id="Ius-yn-Vhi">
-                                <rect key="frame" x="20" y="748" width="374" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-WM-fRp">
+                                <rect key="frame" x="20" y="763" width="374" height="35"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlT-tG-Yru">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="35"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Wr-w1-DPS">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="sWQ-PI-pSB"/>
+                                            <constraint firstAttribute="height" constant="35" id="DG0-So-PWI"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="324" id="cpR-wB-p4V"/>
                                         </constraints>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kav-0w-oRV">
-                                        <rect key="frame" x="340" y="0.0" width="34" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-Be-eWq">
+                                        <rect key="frame" x="339" y="0.0" width="35" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="34" id="cBx-Rr-vdm"/>
-                                            <constraint firstAttribute="height" constant="35" id="ezi-tB-Nej"/>
+                                            <constraint firstAttribute="width" constant="35" id="Mvy-4K-4my"/>
+                                            <constraint firstAttribute="height" constant="35" id="jXF-Rz-L1u"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="icons8-paper_plane"/>
-                                        <connections>
-                                            <action selector="sendButtonPressed:" destination="bXJ-uS-8iP" eventType="touchUpInside" id="ans-Vj-Bl6"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -307,16 +275,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V9b-9q-AYd" firstAttribute="trailing" secondItem="KQW-AS-mSl" secondAttribute="trailing" id="1Jf-CB-JTB"/>
+                            <constraint firstItem="JwJ-WM-fRp" firstAttribute="top" secondItem="V9b-9q-AYd" secondAttribute="bottom" constant="20" id="BVc-D2-116"/>
                             <constraint firstAttribute="bottom" secondItem="RmR-Tx-JUG" secondAttribute="bottom" id="EUN-Vo-E4C"/>
                             <constraint firstItem="RmR-Tx-JUG" firstAttribute="top" secondItem="KQW-AS-mSl" secondAttribute="top" id="KIO-gq-Uip"/>
-                            <constraint firstItem="V9b-9q-AYd" firstAttribute="top" secondItem="KQW-AS-mSl" secondAttribute="top" constant="20" id="cyG-8y-KRL"/>
+                            <constraint firstItem="KQW-AS-mSl" firstAttribute="bottom" secondItem="JwJ-WM-fRp" secondAttribute="bottom" constant="10" id="ULk-SX-Pt9"/>
+                            <constraint firstItem="KQW-AS-mSl" firstAttribute="trailing" secondItem="JwJ-WM-fRp" secondAttribute="trailing" constant="20" id="byu-99-1u7"/>
                             <constraint firstItem="RmR-Tx-JUG" firstAttribute="trailing" secondItem="KQW-AS-mSl" secondAttribute="trailing" id="fVM-lc-JFf"/>
+                            <constraint firstItem="JwJ-WM-fRp" firstAttribute="leading" secondItem="KQW-AS-mSl" secondAttribute="leading" constant="20" id="jGx-9A-8ld"/>
                             <constraint firstItem="V9b-9q-AYd" firstAttribute="leading" secondItem="KQW-AS-mSl" secondAttribute="leading" id="jZs-Mm-VD7"/>
-                            <constraint firstItem="Ius-yn-Vhi" firstAttribute="top" secondItem="V9b-9q-AYd" secondAttribute="bottom" constant="40" id="l0R-yY-2HV"/>
-                            <constraint firstItem="Ius-yn-Vhi" firstAttribute="leading" secondItem="KQW-AS-mSl" secondAttribute="leading" constant="20" id="laY-sf-EOs"/>
-                            <constraint firstItem="KQW-AS-mSl" firstAttribute="bottom" secondItem="Ius-yn-Vhi" secondAttribute="bottom" constant="25" id="r1D-Uz-Mp7"/>
-                            <constraint firstItem="KQW-AS-mSl" firstAttribute="trailing" secondItem="Ius-yn-Vhi" secondAttribute="trailing" constant="20" id="x2c-nV-YLx"/>
                             <constraint firstItem="RmR-Tx-JUG" firstAttribute="leading" secondItem="KQW-AS-mSl" secondAttribute="leading" id="x4L-04-0V1"/>
+                            <constraint firstItem="V9b-9q-AYd" firstAttribute="top" secondItem="KQW-AS-mSl" secondAttribute="top" id="z3v-Xm-SuO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lZ2-8U-5mO"/>
