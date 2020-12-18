@@ -21,9 +21,11 @@ class MatchViewController: UIViewController {
     
     var previousImages = [UIImage]()
     
+    var imageStrings: String!
+    
     var breedStringArray = [String]()
     
-    let dateBase = Firestore.firestore()
+    let dataBase = Firestore.firestore()
     
     var divisor: CGFloat!
     
@@ -128,7 +130,9 @@ extension MatchViewController{
     func fetchUIImage(imageString: String) -> UIImage?{
         
         fetchBreedString(imageString: imageString)
-    
+        
+        imageStrings = imageString
+        
         let imageURL = URL(string: imageString)
         
         let imageData = try! Data(contentsOf: imageURL!)
@@ -151,17 +155,6 @@ extension MatchViewController{
         if let breedString = breedArray.last?.capitalized{
             
             breedStringArray.append(breedString)
-            
-//            dateBase.collection("breedNames").document("test 3").setData(["name" : [breedString]], merge: true) { error in
-//                if let error = error {
-//                    print("Error writing document: \(error)")
-//                } else {
-//                    print("Document successfully written!")
-//                }
-//            }
-//
-//            let dbBreed = dateBase.collection("breedNames").document("test 3")
-//            dbBreed.updateData([ "name" : FieldValue.arrayUnion([breedString]) ])
             
             dogTextLabel.text = breedString
         }
@@ -199,6 +192,18 @@ extension MatchViewController{
             self.cardView.center = CGPoint(x: self.cardView.center.x + 200, y: self.cardView.center.y + 75)
             self.cardView.alpha = 0
         }
+        dataBase.collection("chatList").addDocument(data: [
+            "dogName": dogTextLabel.text,
+            "imageURL": imageStrings,
+            "mostRecent": Date().timeIntervalSince1970
+        ]) { (error) in
+            if let e = error{
+                print("Issue saving data to Firestore, \(e)")
+            } else {
+                print("Successfully saved data.")
+            }
+        }
+        
         cardWasSwiped()
         return
     }
