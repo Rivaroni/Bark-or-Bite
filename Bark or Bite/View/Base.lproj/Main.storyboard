@@ -177,7 +177,7 @@
         <!--Chat-->
         <scene sceneID="1e3-wK-Ymc">
             <objects>
-                <viewController id="bXJ-uS-8iP" customClass="ChatViewController" customModule="Bark_or_Bite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bXJ-uS-8iP" customClass="ChatListViewController" customModule="Bark_or_Bite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="btR-Ph-eeJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="797.54464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="cXs-zj-NYl">
             <objects>
-                <viewController id="qES-hR-3Ul" sceneMemberID="viewController">
+                <viewController id="qES-hR-3Ul" customClass="ChatViewController" customModule="Bark_or_Bite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r4d-Hf-atP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,6 +267,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="icons8-paper_plane"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="qES-hR-3Ul" eventType="touchUpInside" id="gfY-Qu-hJg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -288,6 +291,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lZ2-8U-5mO"/>
+                    <connections>
+                        <outlet property="tableView" destination="V9b-9q-AYd" id="nlQ-Is-6eh"/>
+                        <outlet property="textField" destination="1Wr-w1-DPS" id="Ist-dP-Z9C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVT-wZ-TvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

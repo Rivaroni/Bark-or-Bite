@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BC20EF833A53685D34601B0 /* Pods_Bark_or_Bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B094FD5D752078E23CE81216 /* Pods_Bark_or_Bite.framework */; };
-		F618DC39258A914200DEB613 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC38258A914200DEB613 /* ChatViewController.swift */; };
+		F618DC39258A914200DEB613 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC38258A914200DEB613 /* ChatListViewController.swift */; };
 		F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618DC3B258A917D00DEB613 /* ProfileViewController.swift */; };
 		F618DC43258A947600DEB613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F618DC42258A947600DEB613 /* GoogleService-Info.plist */; };
 		F640EAB9258BAFEF00C63B90 /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640EAB8258BAFEF00C63B90 /* ChatList.swift */; };
@@ -22,12 +22,13 @@
 		F6C159FC258676A5004A862E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C159FB258676A5004A862E /* Assets.xcassets */; };
 		F6C159FF258676A5004A862E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C159FD258676A5004A862E /* LaunchScreen.storyboard */; };
 		F6DDCC43258CFFA80089BBE4 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDCC42258CFFA80089BBE4 /* Messages.swift */; };
+		F6DDCC4B258D1A540089BBE4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDCC4A258D1A540089BBE4 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1534E929282C81292B023966 /* Pods-Bark or Bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.debug.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.debug.xcconfig"; sourceTree = "<group>"; };
 		B094FD5D752078E23CE81216 /* Pods_Bark_or_Bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bark_or_Bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F618DC38258A914200DEB613 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F618DC38258A914200DEB613 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		F618DC3B258A917D00DEB613 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F618DC42258A947600DEB613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F640EAB8258BAFEF00C63B90 /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		F6C159FE258676A5004A862E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6C15A00258676A5004A862E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6DDCC42258CFFA80089BBE4 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		F6DDCC4A258D1A540089BBE4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FA885B44F447C93F7531544D /* Pods-Bark or Bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bark or Bite.release.xcconfig"; path = "Target Support Files/Pods-Bark or Bite/Pods-Bark or Bite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				F6C159F6258676A5004A862E /* MatchViewController.swift */,
-				F618DC38258A914200DEB613 /* ChatViewController.swift */,
+				F618DC38258A914200DEB613 /* ChatListViewController.swift */,
+				F6DDCC4A258D1A540089BBE4 /* ChatViewController.swift */,
 				F618DC3B258A917D00DEB613 /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -264,8 +267,9 @@
 			files = (
 				F6C159F7258676A5004A862E /* MatchViewController.swift in Sources */,
 				F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */,
+				F6DDCC4B258D1A540089BBE4 /* ChatViewController.swift in Sources */,
 				F6C159F3258676A5004A862E /* AppDelegate.swift in Sources */,
-				F618DC39258A914200DEB613 /* ChatViewController.swift in Sources */,
+				F618DC39258A914200DEB613 /* ChatListViewController.swift in Sources */,
 				F6C159F5258676A5004A862E /* SceneDelegate.swift in Sources */,
 				F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */,
 				F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */,
