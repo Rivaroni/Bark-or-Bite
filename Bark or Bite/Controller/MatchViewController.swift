@@ -27,6 +27,7 @@ class MatchViewController: UIViewController {
     
     let dataBase = Firestore.firestore()
     
+    
     var divisor: CGFloat!
     
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class MatchViewController: UIViewController {
         divisor = (view.frame.width / 2) / 0.61
         cardView.layer.cornerRadius = 10
         imageView.layer.cornerRadius = 10
+        
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -192,11 +194,21 @@ extension MatchViewController{
             self.cardView.center = CGPoint(x: self.cardView.center.x + 200, y: self.cardView.center.y + 75)
             self.cardView.alpha = 0
         }
-        dataBase.collection("chatList").addDocument(data: [
+        
+        let currentDogName = dogTextLabel.text!
+        dataBase.collection("chatList").document(currentDogName).setData([
             "dogName": dogTextLabel.text,
             "imageURL": imageStrings,
             "mostRecent": Date().timeIntervalSince1970
-        ]) { (error) in
+        ]){ (error) in
+            if let e = error{
+                print("Issue saving data to Firestore, \(e)")
+            } else {
+                print("Successfully saved data.")
+            }
+        }
+        dataBase.collection("chatList").document(currentDogName).collection("messageList").document("doggo").setData(["dogName": dogTextLabel.text,"messageBody": "","dateField": Date().timeIntervalSince1970])
+        { (error) in
             if let e = error{
                 print("Issue saving data to Firestore, \(e)")
             } else {

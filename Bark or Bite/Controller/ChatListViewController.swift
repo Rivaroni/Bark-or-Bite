@@ -15,13 +15,18 @@ class ChatListViewController: UIViewController{
 
     let dataBase = Firestore.firestore()
     var chatList = [ChatList]()
+    var dogName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         chatTableView.dataSource = self
         
+        chatTableView.delegate = self
+        
         chatTableView.rowHeight = 125
+        
+        chatTableView.allowsSelection = true
   
         loadList()
        
@@ -46,9 +51,16 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
         
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dogName = chatList[indexPath.row].dogName
         performSegue(withIdentifier: "toChat", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as? ChatViewController
+        destinationVC?.dogName = dogName
+        print(dogName)
     }
     
     func loadList(){
