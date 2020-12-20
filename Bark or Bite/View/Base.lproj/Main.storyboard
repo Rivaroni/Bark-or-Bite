@@ -71,17 +71,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cab-4L-G9n">
                                         <rect key="frame" x="8" y="8" width="388" height="510"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" image="funny-corgi-butts4" translatesAutoresizingMaskIntoConstraints="NO" id="raq-WV-vej">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" image="Artboard" translatesAutoresizingMaskIntoConstraints="NO" id="raq-WV-vej">
                                                 <rect key="frame" x="0.0" y="0.0" width="388" height="435"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="388" id="4Hn-CE-rfd"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="435" id="vhv-9m-9M5"/>
+                                                    <constraint firstAttribute="height" constant="435" id="vhv-9m-9M5"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="ZJa-7k-Fnt">
                                                 <rect key="frame" x="0.0" y="460" width="388" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corgi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyZ-R0-m6w">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyZ-R0-m6w">
                                                         <rect key="frame" x="0.0" y="0.0" width="261" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="261" id="7t3-DS-DEH"/>
@@ -192,9 +192,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="qES-hR-3Ul" kind="show" identifier="toChat" id="Xah-0g-4Qk"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -213,6 +210,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chatTableView" destination="V5X-YO-kZS" id="cYh-6x-7dX"/>
+                        <segue destination="qES-hR-3Ul" kind="show" identifier="toChat" id="wxF-ct-G5z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMD-Y1-DnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -324,10 +322,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Artboard" width="400" height="450"/>
         <image name="abstract1" width="1080" height="1920"/>
         <image name="back" width="40" height="40"/>
         <image name="dislike" width="40" height="40"/>
-        <image name="funny-corgi-butts4" width="660" height="660"/>
         <image name="heart" width="40" height="40"/>
         <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
         <image name="icons8-paper_plane" width="50" height="50"/>

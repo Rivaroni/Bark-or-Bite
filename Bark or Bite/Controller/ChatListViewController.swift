@@ -16,6 +16,7 @@ class ChatListViewController: UIViewController{
     let dataBase = Firestore.firestore()
     var chatList = [ChatList]()
     var dogName: String?
+    var indexPath = IndexPath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +25,8 @@ class ChatListViewController: UIViewController{
         
         chatTableView.delegate = self
         
-        chatTableView.rowHeight = 125
+        chatTableView.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "CustomChat")
         
-        chatTableView.allowsSelection = true
-  
         loadList()
        
     }
@@ -44,23 +43,22 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "List", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomChat", for: indexPath) as! ChatListCell
         
-        cell.imageView?.image = chatList[indexPath.row].image
-        cell.textLabel?.text = chatList[indexPath.row].dogName
+        cell.dogImageView.image = chatList[indexPath.row].image
+        cell.dogTextLabel.text = chatList[indexPath.row].dogName
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dogName = chatList[indexPath.row].dogName
-        performSegue(withIdentifier: "toChat", sender: self)
+            dogName = chatList[indexPath.row].dogName
+            performSegue(withIdentifier: "toChat", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as? ChatViewController
-        destinationVC?.dogName = dogName
-        print(dogName)
+            let destinationVC = segue.destination as? ChatViewController
+            destinationVC?.dogName = dogName
     }
     
     func loadList(){

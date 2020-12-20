@@ -34,6 +34,7 @@ class MatchViewController: UIViewController {
         super.viewDidLoad()
         // Set up delegate to allow view controller to edit
         imageManager.delegate = self
+        imageManager.fetchImage()
         
         divisor = (view.frame.width / 2) / 0.61
         cardView.layer.cornerRadius = 10
@@ -197,8 +198,8 @@ extension MatchViewController{
         
         let currentDogName = dogTextLabel.text!
         dataBase.collection("chatList").document(currentDogName).setData([
-            "dogName": dogTextLabel.text,
-            "imageURL": imageStrings,
+            "dogName": dogTextLabel.text!,
+            "imageURL": imageStrings!,
             "mostRecent": Date().timeIntervalSince1970
         ]){ (error) in
             if let e = error{
@@ -207,7 +208,7 @@ extension MatchViewController{
                 print("Successfully saved data.")
             }
         }
-        dataBase.collection("chatList").document(currentDogName).collection("messageList").document("doggo").setData(["dogName": dogTextLabel.text,"messageBody": "","dateField": Date().timeIntervalSince1970])
+        dataBase.collection("chatList").document(currentDogName).collection("messageList").document("testData").setData(["dogName": dogTextLabel.text!])
         { (error) in
             if let e = error{
                 print("Issue saving data to Firestore, \(e)")

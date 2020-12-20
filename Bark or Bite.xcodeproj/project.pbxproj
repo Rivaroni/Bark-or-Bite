@@ -15,6 +15,10 @@
 		F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF782587BE79002AE9DE /* ImageManager.swift */; };
 		F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7C2587BEEE002AE9DE /* ImageData.swift */; };
 		F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DCF7F2587C060002AE9DE /* ImageModel.swift */; };
+		F67F1946258FB504005DBFF3 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67F1945258FB504005DBFF3 /* ChatListCell.xib */; };
+		F67F1949258FB50F005DBFF3 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67F1948258FB50F005DBFF3 /* MessageCell.xib */; };
+		F67F194C258FB707005DBFF3 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F194B258FB707005DBFF3 /* ChatListCell.swift */; };
+		F67F194F258FC0B2005DBFF3 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F194E258FC0B2005DBFF3 /* MessageCell.swift */; };
 		F6C159F3258676A5004A862E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F2258676A5004A862E /* AppDelegate.swift */; };
 		F6C159F5258676A5004A862E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F4258676A5004A862E /* SceneDelegate.swift */; };
 		F6C159F7258676A5004A862E /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C159F6258676A5004A862E /* MatchViewController.swift */; };
@@ -35,6 +39,10 @@
 		F67DCF782587BE79002AE9DE /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		F67DCF7C2587BEEE002AE9DE /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		F67DCF7F2587C060002AE9DE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		F67F1945258FB504005DBFF3 /* ChatListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
+		F67F1948258FB50F005DBFF3 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		F67F194B258FB707005DBFF3 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		F67F194E258FC0B2005DBFF3 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F6C159EF258676A5004A862E /* Bark or Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bark or Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C159F2258676A5004A862E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C159F4258676A5004A862E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				F6C159F8258676A5004A862E /* Main.storyboard */,
+				F67F1945258FB504005DBFF3 /* ChatListCell.xib */,
+				F67F1948258FB50F005DBFF3 /* MessageCell.xib */,
+				F67F194B258FB707005DBFF3 /* ChatListCell.swift */,
+				F67F194E258FC0B2005DBFF3 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,7 +222,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C159FF258676A5004A862E /* LaunchScreen.storyboard in Resources */,
+				F67F1949258FB50F005DBFF3 /* MessageCell.xib in Resources */,
 				F618DC43258A947600DEB613 /* GoogleService-Info.plist in Resources */,
+				F67F1946258FB504005DBFF3 /* ChatListCell.xib in Resources */,
 				F6C159FC258676A5004A862E /* Assets.xcassets in Resources */,
 				F6C159FA258676A5004A862E /* Main.storyboard in Resources */,
 			);
@@ -269,11 +283,13 @@
 				F67DCF802587C060002AE9DE /* ImageModel.swift in Sources */,
 				F6DDCC4B258D1A540089BBE4 /* ChatViewController.swift in Sources */,
 				F6C159F3258676A5004A862E /* AppDelegate.swift in Sources */,
+				F67F194F258FC0B2005DBFF3 /* MessageCell.swift in Sources */,
 				F618DC39258A914200DEB613 /* ChatListViewController.swift in Sources */,
 				F6C159F5258676A5004A862E /* SceneDelegate.swift in Sources */,
 				F67DCF7D2587BEEE002AE9DE /* ImageData.swift in Sources */,
 				F618DC3C258A917D00DEB613 /* ProfileViewController.swift in Sources */,
 				F6DDCC43258CFFA80089BBE4 /* Messages.swift in Sources */,
+				F67F194C258FB707005DBFF3 /* ChatListCell.swift in Sources */,
 				F640EAB9258BAFEF00C63B90 /* ChatList.swift in Sources */,
 				F67DCF792587BE79002AE9DE /* ImageManager.swift in Sources */,
 			);

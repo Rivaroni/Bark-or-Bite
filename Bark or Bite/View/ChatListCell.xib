@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomChat" id="EJd-Zc-nlE" customClass="ChatListCell" customModule="Bark_or_Bite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EJd-Zc-nlE" id="hbM-2T-IOS">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qJW-rE-5j9">
+                        <rect key="frame" x="20" y="10" width="374" height="110"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-ja-ZA2">
+                                <rect key="frame" x="0.0" y="21" width="75" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="ayb-DA-dqG"/>
+                                    <constraint firstAttribute="width" constant="75" id="osV-dP-xgk"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-OE-TEJ">
+                                <rect key="frame" x="95" y="0.0" width="279" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3Q-pz-Ohk">
+                                        <rect key="frame" x="10" y="10" width="259" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="J3Q-pz-Ohk" firstAttribute="top" secondItem="Bxj-OE-TEJ" secondAttribute="top" constant="10" id="Nax-bZ-eZR"/>
+                                    <constraint firstAttribute="trailing" secondItem="J3Q-pz-Ohk" secondAttribute="trailing" constant="10" id="YE8-s3-M1r"/>
+                                    <constraint firstItem="J3Q-pz-Ohk" firstAttribute="leading" secondItem="Bxj-OE-TEJ" secondAttribute="leading" constant="10" id="arz-oz-Kd6"/>
+                                    <constraint firstAttribute="bottom" secondItem="J3Q-pz-Ohk" secondAttribute="bottom" constant="10" id="pte-Fg-9cc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qJW-rE-5j9" firstAttribute="top" secondItem="hbM-2T-IOS" secondAttribute="top" constant="10" id="Ab0-B3-87v"/>
+                    <constraint firstAttribute="bottom" secondItem="qJW-rE-5j9" secondAttribute="bottom" constant="10" id="BEs-Vp-tA9"/>
+                    <constraint firstItem="qJW-rE-5j9" firstAttribute="leading" secondItem="hbM-2T-IOS" secondAttribute="leading" constant="20" id="PUW-Dw-JAy"/>
+                    <constraint firstAttribute="trailing" secondItem="qJW-rE-5j9" secondAttribute="trailing" constant="10" id="b5d-TP-HR0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dogImageView" destination="YO2-ja-ZA2" id="THU-FP-oG8"/>
+                <outlet property="dogTextLabel" destination="J3Q-pz-Ohk" id="xfT-19-iW7"/>
+            </connections>
+            <point key="canvasLocation" x="78.260869565217391" y="76.339285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

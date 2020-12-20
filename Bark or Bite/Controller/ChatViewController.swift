@@ -15,7 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     var db = Firestore.firestore()
-    var dogName: String!
+    var dogName: String?
     var messages: [Message] = []
     
     override func viewDidLoad() {
@@ -24,18 +24,18 @@ class ChatViewController: UIViewController {
         // Do any additional setup after loading the view.
         textField.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 50
+        tableView.separatorStyle = .none
         
-        print("in chat controller \(dogName)")
-        //  loadMessages()
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "CustomMessage")
+        
+        loadMessages()
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
         textField.resignFirstResponder()
-        print(textField.text)
-        print(dogName)
+        
         if let message = textField.text{
-            db.collection("chatList").document(dogName).collection("messageList").addDocument(data: [
+            db.collection("chatList").document(dogName!).collection("messageList").addDocument(data: [
                 "messageBody": message,
                 "dateField": Date().timeIntervalSince1970
             ])
@@ -53,35 +53,36 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessages(){
-        //TODO: Figure out how to load the cells with messages
-        //        db.collection("chatList").document().collection("messageList").order(by: "dateField")
-        //            .addSnapshotListener { (querySnapshot, error) in
-        //
-        //                self.messages = []
-        //
-        //                if let e = error {
-        //                    print("Issue retrieving data from Firestore \(e)")
-        //                } else {
-        //                    if let snapshotDocuments = querySnapshot?.documents{
-        //                        for doc in snapshotDocuments {
-        //                            let data = doc.data()
-        //                            if let messageBody = data["messageBody"] as? String{
-        //                                let newMessage = Message(messageBody: messageBody)
-        //                                self.messages.append(newMessage)
-        //
-        //                                DispatchQueue.main.async {
-        //                                    self.tableView.reloadData()
-        //                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-        //                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
-        //                                }
-        //
-        //                            }
-        //                        }
-        //                    }
-        //                }
+        
+        db.collection("chatList").document(dogName!).collection("messageList")
+            .order(by: "dateField", descending: false)
+            .addSnapshotListener { (querySnapshot, error) in
+                
+                self.messages = []
+                
+                if let e = error {
+                    print("Issue retrieving data from Firestore \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents{
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            if let messageBody = data["messageBody"] as? String{
+                                let newMessageEntry = Message(messageBody: messageBody)
+                                self.messages.append(newMessageEntry)
+                            }
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                            
+                        }
+                    }
+                }
+            }
     }
-    
 }
+
+
 
 
 //MARK: - UITableView Functions
@@ -94,10 +95,9 @@ extension ChatViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Chat", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomMessage", for: indexPath) as! MessageCell
         
-        cell.textLabel?.text = message.messageBody
-        print("cell text: \(message.messageBody)")
+        cell.messageText.text = message.messageBody
         
         return cell
     }
