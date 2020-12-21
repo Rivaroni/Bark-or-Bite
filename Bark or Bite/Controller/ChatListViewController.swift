@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import ProgressHUD
 
 class ChatListViewController: UIViewController{
     
@@ -21,6 +22,9 @@ class ChatListViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ProgressHUD.show()
+        ProgressHUD.animationType = .circleStrokeSpin
+        
         chatTableView.dataSource = self
         
         chatTableView.delegate = self
@@ -28,6 +32,7 @@ class ChatListViewController: UIViewController{
         chatTableView.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "CustomChat")
         
         loadList()
+        
        
     }
     
@@ -85,6 +90,7 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
                                 
                                 DispatchQueue.main.async {
                                     self.chatTableView.reloadData()
+                                    ProgressHUD.dismiss()
                                 }
                                 
                             }

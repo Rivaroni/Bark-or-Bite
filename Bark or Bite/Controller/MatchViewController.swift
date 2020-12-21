@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import ProgressHUD
 
 class MatchViewController: UIViewController {
     
@@ -33,6 +34,8 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set up delegate to allow view controller to edit
+        ProgressHUD.show()
+        ProgressHUD.animationType = .circleStrokeSpin
         imageManager.delegate = self
         imageManager.fetchImage()
         
@@ -116,6 +119,7 @@ extension MatchViewController: ImageManagerDelegate{
         DispatchQueue.main.async {
             
             self.imageView.image = self.fetchUIImage(imageString: image.dogImage)
+            ProgressHUD.dismiss()
             
         }
     }
