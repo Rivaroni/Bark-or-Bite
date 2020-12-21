@@ -33,7 +33,6 @@ class ChatListViewController: UIViewController{
         
         loadList()
         
-       
     }
     
 }
@@ -71,7 +70,7 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
         dataBase.collection("chatList")
             .order(by: "mostRecent", descending: true)
             .addSnapshotListener { (querySnapshot, error) in
-                
+              
                 self.chatList = []
                 
                 if let e = error {
@@ -95,7 +94,8 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
                                 
                             }
                         }
-                    }
+                    }; self.chatTableView.reloadData()
+                    ProgressHUD.dismiss()
                 }
             }
     }
