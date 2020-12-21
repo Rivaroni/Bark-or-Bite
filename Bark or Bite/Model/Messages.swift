@@ -9,4 +9,5 @@ import Foundation
 
 struct Message {
     let messageBody: String
+    let cpuBody: String
 }

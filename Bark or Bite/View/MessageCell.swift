@@ -14,7 +14,10 @@ class MessageCell: UITableViewCell{
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var leftProfilePicture: UIImageView!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
+        
+        messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 5
+        leftProfilePicture.isHidden = true
     }
 }
