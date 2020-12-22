@@ -16,7 +16,7 @@ class ChatListCell: UITableViewCell{
         super.awakeFromNib()
         // Initialization code
         
-        dogImageView.layer.cornerRadius = 35
+        dogImageView.layer.cornerRadius = 34
         
     }
 

@@ -22,52 +22,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-Tb-Zz5">
-                                <rect key="frame" x="22" y="728" width="370" height="75"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hw-pl-Ci1">
-                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="2cI-wV-mL1"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="j5V-Es-5kY"/>
-                                        </constraints>
-                                        <state key="normal" title="Dislike" backgroundImage="dislike">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXl-6E-srY"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-Cj-p5F">
-                                        <rect key="frame" x="146.5" y="0.0" width="77" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="UDd-e3-S2Y"/>
-                                            <constraint firstAttribute="height" constant="75" id="gZO-Ga-rJd"/>
-                                        </constraints>
-                                        <state key="normal" title="Back" backgroundImage="back">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1j-QZ-xQ2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-JN-nlB">
-                                        <rect key="frame" x="293.5" y="0.0" width="76.5" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="0lu-Ja-V73"/>
-                                            <constraint firstAttribute="height" constant="75" id="lxC-Ue-QMZ"/>
-                                        </constraints>
-                                        <state key="normal" title="Like" backgroundImage="heart">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7S9-GI-ax1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-wb-spy" userLabel="Card">
-                                <rect key="frame" x="5" y="177" width="404" height="526"/>
+                                <rect key="frame" x="5" y="222" width="404" height="526"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cab-4L-G9n">
                                         <rect key="frame" x="8" y="8" width="388" height="510"/>
@@ -128,15 +84,59 @@
                                     <outletCollection property="gestureRecognizers" destination="7nZ-PH-99v" appends="YES" id="tQJ-PF-v9c"/>
                                 </connections>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MVp-RX-VLr">
+                                <rect key="frame" x="20" y="758" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hw-pl-Ci1">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="H3y-vj-agC"/>
+                                            <constraint firstAttribute="height" constant="50" id="Mqe-iP-GNL"/>
+                                        </constraints>
+                                        <state key="normal" title="Dislike" backgroundImage="dislike">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXl-6E-srY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-Cj-p5F">
+                                        <rect key="frame" x="162" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="jS3-Mw-ryN"/>
+                                            <constraint firstAttribute="height" constant="50" id="lTM-kG-GaY"/>
+                                        </constraints>
+                                        <state key="normal" title="Back" backgroundImage="back">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1j-QZ-xQ2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-JN-nlB">
+                                        <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RlC-1a-ByF"/>
+                                            <constraint firstAttribute="width" constant="50" id="nxb-5v-b9U"/>
+                                        </constraints>
+                                        <state key="normal" title="Like" backgroundImage="heart">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7S9-GI-ax1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ph-Tb-Zz5" secondAttribute="bottom" constant="10" id="6HA-TF-0Fp"/>
-                            <constraint firstItem="2ph-Tb-Zz5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="8gD-b5-dgC"/>
+                            <constraint firstItem="MVp-RX-VLr" firstAttribute="top" secondItem="7Zs-wb-spy" secondAttribute="bottom" constant="10" id="Mmg-XO-WRe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Zs-wb-spy" secondAttribute="trailing" constant="5" id="Oms-mX-hIj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ph-Tb-Zz5" secondAttribute="trailing" constant="22" id="afx-N2-po8"/>
-                            <constraint firstItem="2ph-Tb-Zz5" firstAttribute="top" secondItem="7Zs-wb-spy" secondAttribute="bottom" constant="25" id="noK-vh-tM2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MVp-RX-VLr" secondAttribute="bottom" constant="5" id="QUA-m6-2Gr"/>
+                            <constraint firstItem="MVp-RX-VLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bYC-NX-brw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MVp-RX-VLr" secondAttribute="trailing" constant="20" id="fnK-Xg-HvQ"/>
                             <constraint firstItem="7Zs-wb-spy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zYE-kn-V0z"/>
                         </constraints>
                     </view>
