@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "chevron-right---filled(24x24)@2x.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
