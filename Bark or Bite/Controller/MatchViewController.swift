@@ -28,6 +28,9 @@ class MatchViewController: UIViewController {
     
     let dataBase = Firestore.firestore()
     
+    var leftAnchor: NSLayoutConstraint?
+    var rightAnchor: NSLayoutConstraint?
+    
     
     var divisor: CGFloat!
     
@@ -38,6 +41,9 @@ class MatchViewController: UIViewController {
         ProgressHUD.animationType = .circleStrokeSpin
         imageManager.delegate = self
         imageManager.fetchImage()
+        view.addSubview(cardView)
+        cardView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        cardView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         
         divisor = (view.frame.width / 2) / 0.61
         cardView.layer.cornerRadius = 10
@@ -179,7 +185,8 @@ extension MatchViewController{
         // identity = Restores object original position
         cardView.transform = CGAffineTransform.identity
         UIView.animate(withDuration: 0.6) {
-            self.cardView.center = self.view.center
+            self.cardView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+            self.cardView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
             self.thumbView.alpha = 0
             self.cardView.alpha = 1
             
