@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-wb-spy" userLabel="Card">
-                                <rect key="frame" x="5" y="182" width="404" height="526"/>
+                                <rect key="frame" x="5" y="202" width="404" height="526"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cab-4L-G9n">
                                         <rect key="frame" x="8" y="8" width="388" height="510"/>
@@ -57,6 +57,9 @@
                                                         <state key="normal" title="More Info">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMU-mV-zGA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -132,7 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MVp-RX-VLr" firstAttribute="top" secondItem="7Zs-wb-spy" secondAttribute="bottom" constant="30" id="Mmg-XO-WRe"/>
+                            <constraint firstItem="MVp-RX-VLr" firstAttribute="top" secondItem="7Zs-wb-spy" secondAttribute="bottom" constant="10" id="Mmg-XO-WRe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Zs-wb-spy" secondAttribute="trailing" constant="5" id="Oms-mX-hIj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MVp-RX-VLr" secondAttribute="bottom" constant="5" id="QUA-m6-2Gr"/>
                             <constraint firstItem="MVp-RX-VLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bYC-NX-brw"/>
@@ -176,10 +179,10 @@
                                                 <rect key="frame" x="30" y="30" width="314" height="380.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="NbP-vZ-RyR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="192"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="228.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="funny-corgi-butts4" translatesAutoresizingMaskIntoConstraints="NO" id="ISs-uM-IfV">
-                                                                <rect key="frame" x="112" y="51" width="90" height="90"/>
+                                                                <rect key="frame" x="112" y="69" width="90" height="90"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="90" id="8wC-P9-SUW"/>
                                                                     <constraint firstAttribute="height" constant="90" id="S9w-ai-nuh"/>
@@ -193,10 +196,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0i-TH-BlT">
-                                                        <rect key="frame" x="0.0" y="197" width="314" height="73"/>
+                                                        <rect key="frame" x="0.0" y="233.5" width="314" height="87"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Michael Rivera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmb-N8-Zdv">
-                                                                <rect key="frame" x="68.5" y="11.5" width="177" height="50"/>
+                                                                <rect key="frame" x="68.5" y="18.5" width="177" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="ujt-Lp-7UW"/>
                                                                 </constraints>
@@ -212,10 +215,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-fH-YKc">
-                                                        <rect key="frame" x="0.0" y="275" width="314" height="105.5"/>
+                                                        <rect key="frame" x="0.0" y="325.5" width="314" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj4-CI-6rr">
-                                                                <rect key="frame" x="98" y="35" width="118" height="36"/>
+                                                                <rect key="frame" x="98" y="9.5" width="118" height="36"/>
                                                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
                                                                 <state key="normal" title="Edit Profile">
                                                                     <color key="titleColor" red="0.94513934850000003" green="0.94494396449999996" blue="0.95294386149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import ProgressHUD
+import SafariServices
 
 class MatchViewController: UIViewController {
     
@@ -52,7 +53,7 @@ class MatchViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        
+
         if sender.currentTitle == "Back"{
             breedStringArray.removeLast()
             dogTextLabel.text = breedStringArray.last
@@ -63,11 +64,20 @@ class MatchViewController: UIViewController {
             thumbView.tintColor = .green
             thumbView.alpha = 1
             cardSwipedRight()
-        } else {
+        } else if sender.currentTitle == "Dislike"{
             thumbView.image = UIImage(named: "thumbdown")
             thumbView.tintColor = .red
             thumbView.alpha = 1
             cardSwipedLeft()
+        } else if sender.currentTitle == "More Info"{
+            
+            if let dogText = dogTextLabel.text{
+                // Creates a webview
+                if let googleURL = URL(string: "https://www.google.com/search?q=\(dogText)" ){
+                    let vc = SFSafariViewController(url: googleURL)
+                    present(vc, animated: true, completion: nil)
+                }
+            }
         }
         
     }

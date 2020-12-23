@@ -60,6 +60,26 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
             performSegue(withIdentifier: "toChat", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let TrashAction = UIContextualAction(style: .normal, title: "Trash") { (ac, view, success) in
+            let dogString = self.chatList[indexPath.row].dogName
+            let alert = UIAlertController(title: "Delete Chat", message: "Are you sure you want to delete this chat: \(dogString)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
+                self.deleteFirebase(indexpath: indexPath, string: dogString)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        TrashAction.backgroundColor = #colorLiteral(red: 0.8729329705, green: 0.8204954267, blue: 1, alpha: 1)
+        TrashAction.image = UIImage(named: "trash")
+        
+        return UISwipeActionsConfiguration(actions: [TrashAction])
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destinationVC = segue.destination as? ChatViewController
             destinationVC?.dogName = dogName
@@ -98,6 +118,17 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate{
                     ProgressHUD.dismiss()
                 }
             }
+    }
+    
+    func deleteFirebase(indexpath: IndexPath, string: String){
+        dataBase.collection("chatList").document(string).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+                self.chatTableView.reloadData()
+            }
+        }
     }
     
 }
